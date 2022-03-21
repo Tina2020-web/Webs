@@ -1,0 +1,90 @@
+.container {
+  display: grid;
+  grid-template-columns: 7fr 2fr;
+  grid-template-rows: 180px 50fr 700fr 10px;
+  grid-template-areas:
+    "r1   r1"
+    "r2   r2"
+    "r3c1 r3c2"
+    "r4   r4";
+}
+.header {
+  grid-area: r1;
+  background-color: rgb(251, 250, 251);
+  text-align: center;
+}
+.menu {
+  grid-area: r2;
+  color: rgb(208, 205, 223);
+  height: 50px;
+  margin: 0%;
+  padding-right: 0px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.main {
+  grid-area: r3c1;
+  padding: 0%;
+  margin: 2%;
+}
+.aside {
+  grid-area: r3c2;
+  background-color: rgb(251, 250, 250);
+  padding: 10px 0px;
+  margin: 0px 0px;
+}
+.footer {
+  grid-area: r4;
+  background-color: rgb(251, 250, 250);
+  height: 20px;
+}
+
+.aside_container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 50px 50px 50px;
+  grid-template-areas:
+    "purchases purchases"
+    "items   cart"
+    "check   check";
+  margin: 10px;
+}
+.purchases {
+  grid-area: purchases;
+}
+.items {
+  grid-area: items;
+}
+.cart {
+  grid-area: cart;
+}
+.checkout {
+  grid-area: check;
+}
+
+.logo {
+  height: 180px;
+  width: 180px;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+.form {
+  margin: 10px 40px 10px 5px;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr 2.5fr 8fr 1fr;
+    grid-template-areas:
+      "r1   r1"
+      "r2   r2"
+      "r3c1 r3c2"
+      "r4   r4";
+  }
+}
